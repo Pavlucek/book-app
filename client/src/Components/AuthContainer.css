@@ -1,0 +1,10 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* You might need to adjust the width of the individual panels to fit them side by side */
+.login-panel, .registration-panel {
+    flex-basis: 50%; /* Adjust the width as necessary */
+    max-width: 300px; /* Adjust the max width as necessary */
+}
