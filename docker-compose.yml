@@ -7,7 +7,7 @@ services:
     links:
       - mongodb
     environment:
-      - MONGO_URI=mongodb://mongodb/myLoginApp
+      - MONGO_URI=mongodb://mongodb/booksDatabase
   frontend:
     build: ./client
     ports:

@@ -19,6 +19,12 @@ RUN npm run build
 # Use Nginx to serve the React app
 FROM nginx:stable-alpine
 
+# Remove the default Nginx configuration file
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy the custom Nginx configuration file from the host to the container
+COPY custom-nginx.conf /etc/nginx/conf.d/default.conf
+
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
